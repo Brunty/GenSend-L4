@@ -1,0 +1,25 @@
+# Compiled files
+/bootstrap/compiled.php
+
+# Directoriess and IDE stuff
+/vendor
+/storage
+/.vagrant
+/.idea
+/public/packages
+/workbench
+
+# Composer Files
+composer.phar
+composer.lock
+
+# Environment Files
+.env.local.php
+.env.php
+.env.*.php
+.env.localva.php
+
+# Silly OS type files
+.DS_Store
+Thumbs.db
+.DS_Stores
