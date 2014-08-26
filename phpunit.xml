@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="bootstrap/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="false"
+>
+    <filter>
+        <blacklist>
+            <directory suffix=".php">./vendor</directory>
+            <directory suffix=".php">./workbench/brunty/utils/vendor</directory>
+            <directory suffix=".php">./app/GenSend/Interfaces</directory>
+            <directory suffix="">./storage</directory>
+            <directory suffix="">./app/storage</directory>
+            <file>./workbench/brunty/utils/src/Brunty/Utils/UtilsServiceProvider.php</file>
+            <file>./app/start/global.php</file>
+            <file>./app/filters.php</file>
+        </blacklist>
+    </filter>
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory>./app/tests/</directory>
+        </testsuite>
+        <testsuite name="Workbench Test Suite">
+            <directory>./workbench/brunty/utils/tests/</directory>
+        </testsuite>
+    </testsuites>
+   <logging>
+      <log type="coverage-html" target="./storage/work/report/" charset="UTF-8"
+       highlight="false" lowUpperBound="35" highLowerBound="80"/>
+    </logging>
+</phpunit>

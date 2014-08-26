@@ -1,0 +1,14 @@
+/vendor
+/storage
+/.vagrant
+/.idea
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db
+.DS_Stores
+/build
+.ruby-version
+composer.lock
+Gemfile.lock
+coverage
