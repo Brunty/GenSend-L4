@@ -10,6 +10,7 @@
     "require-dev": {
         "way/generators": "2.*",
         "phpunit/phpunit": "3.7.*",
+        "satooshi/php-coveralls": "dev-master",
 		"barryvdh/laravel-debugbar": "dev-master",
         "brunty/laravel-environment": "0.*"
     },

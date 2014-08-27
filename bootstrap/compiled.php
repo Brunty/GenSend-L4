@@ -477,7 +477,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
     }
     public static function getBootstrapFile()
     {
-        return '/Users/brunty/Sites/gensend-l4/vendor/laravel/framework/src/Illuminate/Foundation' . '/start.php';
+        return '/Users/brunty/Sites/gs-l4/vendor/laravel/framework/src/Illuminate/Foundation' . '/start.php';
     }
     public function startExceptionHandling()
     {

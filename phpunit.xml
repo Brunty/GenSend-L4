@@ -17,6 +17,9 @@
             <directory suffix=".php">./app/GenSend/Interfaces</directory>
             <directory suffix="">./storage</directory>
             <directory suffix="">./app/storage</directory>
+            <directory suffix="">./bootstrap</directory>
+            <directory suffix="">./app/database</directory>
+
             <file>./workbench/brunty/utils/src/Brunty/Utils/UtilsServiceProvider.php</file>
             <file>./app/start/global.php</file>
             <file>./app/filters.php</file>
@@ -30,6 +33,11 @@
             <directory>./workbench/brunty/utils/tests/</directory>
         </testsuite>
     </testsuites>
-   <logging>
+    <logging>
+        <log type="tap" target="build/report.tap"/>
+        <log type="junit" target="build/report.junit.xml"/>
+        <log type="coverage-html" target="build/coverage" charset="UTF-8" yui="true" highlight="true"/>
+        <log type="coverage-text" target="build/coverage.txt"/>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
     </logging>
 </phpunit>

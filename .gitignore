@@ -9,6 +9,7 @@
 /public/packages
 /workbench
 /html
+/build
 
 # sqlite DB files
 /db/*.sqlite
