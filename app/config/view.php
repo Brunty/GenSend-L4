@@ -17,7 +17,7 @@ return array(
                     __DIR__.'/../views',
 
                     // directory in the GenSend app folder where views are stored, all views should go in here
-                    __DIR__.'/../GenSend/Views'
+                    //__DIR__.'/../GenSend/Views'
                 ),
 
 	/*
