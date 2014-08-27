@@ -8,16 +8,18 @@
 /.idea
 /public/packages
 /workbench
+/html
+
+# sqlite DB files
+/db/*.sqlite
 
 # Composer Files
 composer.phar
 composer.lock
 
 # Environment Files
-.env.local.php
 .env.php
 .env.*.php
-.env.localva.php
 
 # Silly OS type files
 .DS_Store
