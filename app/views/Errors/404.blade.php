@@ -1,4 +1,4 @@
-@extends('Layouts.main')
+@extends('...layouts.main')
 
 @section('metaTitle')404 - Content Not Found!@stop
 
