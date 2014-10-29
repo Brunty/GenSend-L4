@@ -1,8 +1,8 @@
 ---
 vagrantfile-local:
     vm:
-        box: puphpet/debian75-x64
-        box_url: puphpet/debian75-x64
+        box: puphpet/ubuntu1404-x64
+        box_url: puphpet/ubuntu1404-x64
         hostname: ''
         memory: '512'
         cpus: '1'
@@ -10,8 +10,8 @@ vagrantfile-local:
         network:
             private_network: 192.168.56.106
             forwarded_port:
-                PfLs9TwP84uL:
-                    host: '8813'
+                SYI4098UCfjg:
+                    host: '5582'
                     guest: '22'
         post_up_message: ''
         provider:
@@ -32,7 +32,7 @@ vagrantfile-local:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            tDddHtO5sSHY:
+            hCyHewnhqM3c:
                 source: ./
                 target: /var/www
                 sync_type: default
@@ -62,14 +62,13 @@ vagrantfile-local:
 server:
     install: '1'
     packages:
-        - nano
         - htop
-        - vim
+        - nano
 firewall:
     install: '1'
     rules: null
 apache:
-    install: '0'
+    install: 0
     settings:
         user: www-data
         group: www-data
@@ -80,7 +79,7 @@ apache:
     modules:
         - rewrite
     vhosts:
-        B70qobvnot7Q:
+        q1zEmqDhGzji:
             servername: awesome.dev
             serveraliases:
                 - www.awesome.dev
@@ -108,9 +107,11 @@ nginx:
         proxy_buffer_size: 128k
         proxy_buffers: '4 256k'
     vhosts:
-        xt3FbzPZXN0p:
-            server_name: gensendl4.dev
-            www_root: /var/www/public
+        N9zEIHKWUGAr:
+            server_name: gensend-laravel.dev
+            server_aliases:
+                - www.gensend-laravel.dev
+            www_root: /var/www
             listen_port: '80'
             location: \.php$
             index_files:
@@ -122,7 +123,7 @@ nginx:
             ssl_key: ''
 php:
     install: '1'
-    version: '55'
+    version: '56'
     composer: '1'
     composer_home: ''
     modules:
@@ -137,7 +138,7 @@ php:
         display_errors: On
         error_reporting: '-1'
         session.save_path: /var/lib/php/session
-    timezone: America/Chicago
+    timezone: Europe/London
     mod_php: 0
 hhvm:
     install: '0'
@@ -152,7 +153,7 @@ hhvm:
         error_reporting: '-1'
     timezone: null
 xdebug:
-    install: '0'
+    install: '1'
     settings:
         xdebug.default_enable: '1'
         xdebug.remote_autostart: '0'
@@ -168,40 +169,29 @@ drush:
 ruby:
     install: '1'
     versions:
-        ZcPcAMJsUEJG:
+        C8vleQE86rok:
             version: ''
 nodejs:
     install: '1'
-    npm_packages:
-        - bower
-        - bower-installer
-        - gulp-phpunit
-        - gulp
-        - gulp-minify-css
-        - gulp-uglify
-        - gulp-concat
-        - gulp-autoprefixer
-        - gulp-jshint
-        - gulp-sass
-        - gulp-rename
+    npm_packages: {  }
 python:
     install: '1'
     packages: {  }
     versions:
-        PrjzwgJcKwMX:
+        XfkX9qZuI5CX:
             version: ''
 mysql:
-    install: '1'
+    install: 0
     root_password: '123'
     adminer: 0
     databases:
-        FO7pHOZKccHC:
+        30H8te0c8QPj:
             grant:
                 - ALL
-            name: gsl4_db
+            name: dbname
             host: localhost
-            user: gsl4_usr
-            password: gsl4_pwd
+            user: dbuser
+            password: '123'
             sql_file: ''
 postgresql:
     install: '0'
@@ -213,10 +203,18 @@ postgresql:
     databases: {  }
     adminer: 0
 mariadb:
-    install: '0'
+    install: '1'
     root_password: '123'
     adminer: 0
-    databases: {  }
+    databases:
+        Y77FjifnuXMY:
+            grant:
+                - ALL
+            name: gensend_laravel
+            host: localhost
+            user: gensend_user
+            password: gensend_pass
+            sql_file: ''
     version: '10.0'
 sqlite:
     install: '0'
@@ -233,7 +231,7 @@ redis:
     settings:
         conf_port: '6379'
 mailcatcher:
-    install: '1'
+    install: '0'
     settings:
         smtp_ip: 0.0.0.0
         smtp_port: 1025

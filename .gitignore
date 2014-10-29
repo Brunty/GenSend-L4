@@ -8,6 +8,8 @@
 /.idea
 /public/packages
 /workbench
+
+# Folders used for reporting / coverage
 /html
 /build
 
@@ -16,7 +18,6 @@
 
 # Composer Files
 composer.phar
-composer.lock
 
 # Environment Files
 .env.php
